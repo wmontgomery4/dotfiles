@@ -45,6 +45,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
+
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_max_files=0
@@ -55,3 +56,4 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set clipboard=unnamed
+colorscheme peachpuff

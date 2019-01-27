@@ -4,6 +4,7 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-flow.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
@@ -32,6 +33,7 @@ if executable('flow')
 				\'javascript': ['eslint'],
 				\}
 endif
+let g:javascript_plugin_flow = 1
 
 " General completion & linting setup
 let g:asyncomplete_smart_completion = 1
@@ -46,3 +48,10 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_max_files=0
+
+" General vim options
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set clipboard=unnamed

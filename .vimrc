@@ -44,6 +44,7 @@ imap <c-space> <Plug>(asyncomplete_force_refresh)
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+tnoremap <Esc> <C-\><C-n>
 set pumheight=10
 
 " ctrlp
@@ -56,4 +57,5 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set clipboard=unnamed
+set hidden
 colorscheme peachpuff

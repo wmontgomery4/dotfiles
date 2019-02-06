@@ -8,6 +8,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " C/C++ completion
@@ -64,4 +65,6 @@ set shiftwidth=2
 set expandtab
 set clipboard=unnamed
 set hidden
-colorscheme peachpuff
+colorscheme elflord
+:highlight Pmenu ctermbg=gray guibg=gray
+

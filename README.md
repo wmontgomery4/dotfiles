@@ -8,7 +8,7 @@ Link what you want. Everything is off by default. Some examples are below.
 
 * `ln -s /path/to/repo/.config ~/.config/
 
-* Or individually to an existing dir: `ln -s /path/to/repo/.config/nvim ~/.config/nvim
+* Or individually to an existing dir: `ln -s /path/to/repo/.config/nvim ~/.config/nvim`
 
 See below for individual packages' instructions.
 

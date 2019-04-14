@@ -9,6 +9,7 @@ Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " C/C++ completion
@@ -57,6 +58,9 @@ let g:ctrlp_user_command = {
     \ },
   \ 'fallback': 'find %s -type f'
   \ }
+
+" Go
+let g:go_def_mode='gopls'
 
 " General vim options
 set smartindent

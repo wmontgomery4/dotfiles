@@ -1,6 +1,6 @@
-alias bzr='bazel run -c opt --config remotecache'
-alias bzt='bazel test -c opt --config remotecache'
-alias bzb='bazel build -c opt --config remotecache'
+alias bzr='bazel run -c opt --config remotecache --config build'
+alias bzt='bazel test -c opt --config remotecache --config build'
+alias bzb='bazel build -c opt --config remotecache --config build'
 alias gcna='git commit --no-verify -am'
 alias gpoc='git push origin `git rev-parse --abbrev-ref HEAD`'
 if [ -e ~/.bashrc ]; then
@@ -16,3 +16,10 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 fi
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

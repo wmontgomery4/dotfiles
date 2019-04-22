@@ -33,7 +33,9 @@ See below for individual packages' instructions.
 
 * Activating Rust support is achieved by installing rustup (https://rustup.rs/) and installing 
   the right components:
-  ```
+
+  # This command installs rust - do so if you haven't already
+  # curl https://sh.rustup.rs -sSf | sh  ```
   rustup update
   rustup component add rls rust-analysis rust-src
   ```

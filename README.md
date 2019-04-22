@@ -14,11 +14,26 @@ See below for individual packages' instructions.
 
 # Vim/Neovim
 
+* This repository requires a fairly new version of Vim or Neovim. Package managers tend to have a
+  version that is too old. These days I install Homebrew on Linux to get around this. Then you can
+  install neovim with simply `brew install neovim`.
+
 * Install vim-plug according to https://github.com/junegunn/vim-plug.
 
 * Launch Vim or Neovim. run `:PlugInstall`.
 
 * To activate C++ completion, clangd must be installed. Use your OS's package manager for easy
-  and good results. Link to `clangd` on your `$PATH` if the binary's name is different.
+  and good results. Link to `clangd` on your `$PATH` if the binary's name is different. Homebrew
+  also has a version that works (and these days Homebrew works well on Linux).
 
 * My Vim config is setup to use `flow` for Javascript editing. Typescript won't work for now.
+
+* Go support can be installing Go (`brew install go` and activated by typing 
+  `:GoInstallBinaries` in the editor.
+
+* Activating Rust support is achieved by installing rustup (https://rustup.rs/) and installing 
+  the right components:
+  ```
+  rustup update
+  rustup component add rls rust-analysis rust-src
+  ```

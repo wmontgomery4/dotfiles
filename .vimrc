@@ -13,6 +13,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
+let g:ale_linters = {
+            \ }
+let g:ale_fixers = {
+            \ }
 " Rust
 if executable('rls')
   au User lsp_setup call lsp#register_server({
@@ -21,6 +25,12 @@ if executable('rls')
         \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
         \ 'whitelist': ['rust'],
         \ })
+  let g:ale_linters.rust = ['rls']
+  let g:ale_rust_rls_toolchain = 'nightly'
+endif
+
+if executable('rustfmt')
+  let g:ale_fixers.rust = ['rustfmt']
 endif
 
 " C/C++ completion
@@ -39,12 +49,8 @@ if executable('flow')
 				\ 'whitelist': ['javascript'],
 				\ 'completor': function('asyncomplete#sources#flow#completor'),
 				\ }))
-	let g:ale_linters = { 
-				\'javascript': ['flow', 'eslint'],
-				\}
-	let g:ale_fixers = {
-				\'javascript': ['eslint'],
-				\}
+  g:ale_linters.javascript = ['flow', 'eslint']
+  g:ale_fixers.javascript = ['eslint']
 endif
 let g:javascript_plugin_flow = 1
 

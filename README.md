@@ -35,5 +35,5 @@ See below for individual packages' instructions.
   the right components:
   ```
   rustup update
-  rustup component add rls rust-analysis rust-src
+  rustup component add rls rust-analysis rust-src rustfmt clippy
   ```

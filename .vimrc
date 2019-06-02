@@ -42,6 +42,10 @@ if executable('clangd')
 				\ })
 endif
 
+if executable('clang-format')
+  let g:ale_fixers.cpp = ['clang-format']
+endif
+
 " Javascript / Flow setup
 if executable('flow')
 	au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#flow#get_source_options({

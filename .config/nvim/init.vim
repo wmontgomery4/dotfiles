@@ -14,7 +14,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 let g:ale_linters = {
-            \ }
+      \ }
 let g:ale_fixers = {
             \ }
 " Rust
@@ -53,8 +53,8 @@ if executable('flow')
 				\ 'whitelist': ['javascript'],
 				\ 'completor': function('asyncomplete#sources#flow#completor'),
 				\ }))
-  g:ale_linters.javascript = ['flow', 'eslint']
-  g:ale_fixers.javascript = ['eslint']
+  let g:ale_linters.javascript = ['flow', 'eslint']
+  let g:ale_fixers.javascript = ['eslint']
 endif
 let g:javascript_plugin_flow = 1
 

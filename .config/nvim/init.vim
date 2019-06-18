@@ -54,7 +54,7 @@ if executable('flow')
 				\ 'completor': function('asyncomplete#sources#flow#completor'),
 				\ }))
   let g:ale_linters.javascript = ['flow', 'eslint']
-  let g:ale_fixers.javascript = ['eslint']
+  let g:ale_fixers.javascript = ['eslint', 'prettier']
 endif
 let g:javascript_plugin_flow = 1
 

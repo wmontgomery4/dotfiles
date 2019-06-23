@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 function showUsage() {
   echo "This script is intended to make it easy to set up a repeatable reverse SSH tunnel."
   echo "* Usage: script TUNNEL_DST_PORT"

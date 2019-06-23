@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+set -x
+
 # Inputs: host, port
 function checkOpen() {
    perlCode='exit(! defined( IO::Socket::INET->new(PeerHost => "'$1'", PeerPort => '$2', Timeout => 3)))'

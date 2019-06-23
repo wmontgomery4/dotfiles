@@ -23,3 +23,4 @@ export PATH=$PATH:/usr/local/go/bin
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.dotfiles-sbin

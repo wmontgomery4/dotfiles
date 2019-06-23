@@ -10,6 +10,9 @@ Link what you want. Everything is off by default. Some examples are below.
 
 * Or individually to an existing dir: `ln -s /path/to/repo/.config/nvim ~/.config/nvim`
 
+* There are some useful scripts in `scripts/`. `.bash_profile` is set up to add `~/.dotfiles-sbin`
+  to `$PATH`. It could be convenient to symlink `scripts/` to ~/.dotfiles-sbin`.
+
 See below for individual packages' instructions.
 
 # Vim/Neovim

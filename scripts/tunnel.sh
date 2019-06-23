@@ -12,7 +12,7 @@ function showUsage() {
   echo "* TUNNEL_DST_USER  is the user name on the host that connected using start-tunnel.sh."
   echo "* If TUNNEL_DST_PORT is set, it will be taken as a the port argument if an argument is not provided."
   echo "* If TUNNEL_DST_USER is set, it will be taken as a default for port if an argumentis not provided."
-  echo "* It's recommended to set TUNNEL_WAN_IP, TUNNEL_USER_NAME, TUNNEL_WAN_PORT, TUNNEL_LAN_IP, "
+  echo "* It's recommended to set TUNNEL_WAN_IP, TUNNEL_USER, TUNNEL_WAN_PORT, TUNNEL_LAN_IP, "
   echo "  TUNNEL_LAN_PORT, TUNNEL_DST_PORT, and TUNNEL_DST_USER in your .bashrc."
   echo "* The companion for this script is start-tunnel.sh."
   echo "* It is also necessary to set up SSH key authentication between this box and the edge box to use "
@@ -31,8 +31,8 @@ if [ -z "$TUNNEL_WAN_IP" ]; then
   exit 1
 fi
 
-if [ -z "$TUNNEL_USER_NAME" ]; then
-  echo "The environment variable TUNNEL_USER_NAME must be set. You should probably define it in your .bashrc"
+if [ -z "$TUNNEL_USER" ]; then
+  echo "The environment variable TUNNEL_USER must be set. You should probably define it in your .bashrc"
   showUsage
   exit 1
 fi
@@ -64,9 +64,9 @@ if [ -z "$TUNNEL_DST_USER" ]; then
 fi
 
 if [ $(checkOpen $TUNNEL_WAN_IP $TUNNEL_WAN_PORT; echo $?) -eq 0 ]; then
-   ssh -p $TUNNEL_WAN_PORT $TUNNEL_USER_NAME@$TUNNEL_WAN_IP -t "ssh $TUNNEL_DST_USER@localhost -p $TUNNEL_DST_PORT"
+   ssh -p $TUNNEL_WAN_PORT $TUNNEL_USER@$TUNNEL_WAN_IP -t "ssh $TUNNEL_DST_USER@localhost -p $TUNNEL_DST_PORT"
 elif [ $(checkOpen $TUNNEL_LAN_IP $TUNNEL_LAN_PORT; echo $?) -eq 0 ]; then
-   ssh -p $TUNNEL_LAN_PORT $TUNNEL_USER_NAME@$TUNNEL_LAN_IP -t "ssh $TUNNEL_DST_USER@localhost -p $TUNNEL_DST_PORT"
+   ssh -p $TUNNEL_LAN_PORT $TUNNEL_USER@$TUNNEL_LAN_IP -t "ssh $TUNNEL_DST_USER@localhost -p $TUNNEL_DST_PORT"
 else
    echo "Couldn't connect to proxy host."
 fi

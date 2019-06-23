@@ -44,4 +44,4 @@ if [ -z "$LOCAL_SSH_PORT" ]; then
   LOCAL_SSH_PORT=22
 fi
 
-AUTOSSH_LOGFILE="$HOME/autossh.log" autossh -f -M 0 -p $TUNNEL_WAN_PORT -N -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes -R \*:$PORT_TO_USE:localhost:$LOCAL_SSH_PORT $TUNNEL_USER@$TUNNEL_WAN_IP
+AUTOSSH_LOGFILE="$HOME/autossh.log" autossh -f -M 0 -p $TUNNEL_WAN_PORT -N -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o ExitOnForwardFailure=yes -R \*:$TUNNEL_DST_PORT:localhost:$LOCAL_SSH_PORT $TUNNEL_USER@$TUNNEL_WAN_IP

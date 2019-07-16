@@ -65,6 +65,7 @@ let g:asyncomplete_smart_completion = 1
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_remove_duplicates = 1
 let g:ale_c_parse_compile_commands = 1
+let g:ale_fix_on_save = 1
 imap <c-space> <Plug>(asyncomplete_force_refresh)
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -109,7 +110,7 @@ set cursorline
 set termguicolors
 let g:material_theme_style = 'darker'
 colorscheme material
-:AirlineTheme wombat
+let g:airline_theme = 'wombat'
 
 :highlight Pmenu ctermbg=gray guibg=gray
 

@@ -16,6 +16,7 @@ else
    echo "Couldn't connect to proxy host."
 fi
 
+mkdir -p /tmp/rsync-share
 ssh -p $PORT $TUNNEL_USER@$IP -t "mkdir -p /tmp/rsync-share"
 
 while [ 1 ]; do

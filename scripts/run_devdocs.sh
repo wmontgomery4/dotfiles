@@ -8,7 +8,7 @@ if [ ! -d $PWD/devdocs ]; then
   bundler update --bundler
   bundle install
   bundle exec thor docs:download --default
-  bundle exec thor docs:download c cpp
+  bundle exec thor docs:download c cpp cmake
 else
   cd devdocs
 fi

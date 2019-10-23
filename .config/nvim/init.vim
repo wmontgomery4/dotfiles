@@ -11,6 +11,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'google/vim-jsonnet'
 call plug#end()
 
 let g:ale_linters = {

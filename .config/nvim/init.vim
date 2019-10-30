@@ -41,6 +41,8 @@ if executable('clangd')
 				\ 'cmd': {server_info->['clangd']},
 				\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
 				\ })
+  " clangd does this for us
+  let g:ale_linters.cpp = []
 endif
 
 if executable('clang-format')

@@ -4,6 +4,8 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-flow.vim'
+Plug 'runoshun/tscompletejob'
+Plug 'prabirshrestha/asyncomplete-tscompletejob.vim'
 Plug 'prabirshrestha/asyncomplete-gocode.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
@@ -12,6 +14,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-jsonnet'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 let g:ale_linters = {
@@ -94,6 +97,12 @@ call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options
     \  },
     \ }))
 
+call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_options({
+    \ 'name': 'tscompletejob',
+    \ 'whitelist': ['typescript'],
+    \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
+    \ }))
+
 " General vim options
 set smartindent
 set tabstop=2
@@ -103,4 +112,3 @@ set clipboard=unnamed
 set hidden
 colorscheme elflord
 :highlight Pmenu ctermbg=gray guibg=gray
-

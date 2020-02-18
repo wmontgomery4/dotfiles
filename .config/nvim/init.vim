@@ -52,6 +52,17 @@ if executable('clang-format')
   let g:ale_fixers.cpp = ['clang-format']
 endif
 
+let g:ale_linters.javascript = []
+let g:ale_fixers.javascript = []
+if executable('eslint')
+  let g:ale_linters.javascript = g:ale_linters.javascript + ['eslint']
+endif
+if executable('prettier')
+  let g:ale_fixers.javascript = g:ale_fixers.javascript + ['prettier']
+endif
+let g:ale_linters.typescript = g:ale_linters.javascript
+let g:ale_fixers.typescript = g:ale_fixers.javascript
+
 " Javascript / Flow setup
 if executable('flow')
 	au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#flow#get_source_options({
@@ -59,10 +70,9 @@ if executable('flow')
 				\ 'whitelist': ['javascript'],
 				\ 'completor': function('asyncomplete#sources#flow#completor'),
 				\ }))
-  let g:ale_linters.javascript = ['flow', 'eslint']
-  let g:ale_fixers.javascript = ['eslint', 'prettier']
+  let g:ale_fixers.javascript = g:ale_fixers.javascript + ['flow']
+  let g:javascript_plugin_flow = 1
 endif
-let g:javascript_plugin_flow = 1
 
 " General completion & linting setup
 let g:asyncomplete_smart_completion = 1

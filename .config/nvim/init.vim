@@ -60,7 +60,6 @@ endif
 if executable('prettier')
   let g:ale_fixers.javascript = g:ale_fixers.javascript + ['prettier']
 endif
-let g:ale_linters.typescript = g:ale_linters.javascript
 let g:ale_fixers.typescript = g:ale_fixers.javascript
 
 " Javascript / Flow setup

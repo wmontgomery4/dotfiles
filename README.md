@@ -44,3 +44,16 @@ See below for individual packages' instructions.
   rustup update
   rustup component add rls rust-analysis rust-src rustfmt clippy
   ```
+
+* Activating Python support by installing all dependencies in a virtualenv before starting
+  your editor. Make sure the Python version matches, and check project documentation for all
+  needed pip dependencies (requirements.txt or the like).
+
+  ```
+  # Seek out instructions on installing virtualenv from another source.
+  # Usually this ends up being pip install virtualenv
+  virtualenv .venv
+  source .venv/bin/activate
+  python -m pip install --user --upgrade pip
+  pip install python-language-server pycodestyle pyflakes autopep8
+  ```

@@ -108,11 +108,26 @@ call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options
     \  },
     \ }))
 
+" Typescript
 call asyncomplete#register_source(asyncomplete#sources#tscompletejob#get_source_options({
     \ 'name': 'tscompletejob',
     \ 'whitelist': ['typescript'],
     \ 'completor': function('asyncomplete#sources#tscompletejob#completor'),
     \ }))
+
+" Python
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+
+if executable('autopep8')
+  let g:ale_fixers.python = ['autopep8']
+endif
 
 " General vim options
 set smartindent

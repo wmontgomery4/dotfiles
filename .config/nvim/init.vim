@@ -35,12 +35,24 @@ let g:ale_fixers.python = ['autopep8']
 let g:javascript_plugin_flow = 1
 let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_c_parse_compile_commands = 1
+let g:ale_completion_tsserver_autoimport = 1
 let g:ale_completion_enabled = 1
+let g:ale_hover_to_preview = 1
+nmap <silent> <leader>ad :ALEGoToDefinitionInSplit<cr>
+nmap <silent> <leader>afr :ALEFindReferences<cr>
+nmap <silent> <leader>aff :ALEFix<cr>
+nmap <silent> <leader>ah :ALEHover<cr>
+nmap <silent> <leader>an :ALENext<cr>
+nmap <silent> <leader>ap :ALEPrevious<cr>
+nmap <silent> <leader>ar :ALERename<cr>
+" let g:ale_cursor_detail = 1
+" let g:ale_list_vertical = 1
 let g:go_def_mode='gopls'
-highlight ALEError ctermbg=none cterm=underline
-highlight ALEWarning ctermbg=none cterm=underline
+let g:airline#extensions#ale#enabled = 1
+highlight ALEWarning ctermbg=none ctermfg=DarkMagenta
+highlight ALEError ctermbg=none ctermfg=DarkMagenta
+let g:SuperTabDefaultCompletionType = "<c-n>"
 set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

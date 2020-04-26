@@ -8,7 +8,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-jsonnet'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-unimpaired'
 Plug 'ervandew/supertab'
 Plug 'keith/swift.vim'
 call plug#end()
@@ -52,6 +51,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"
 set completeopt=longest,menuone
 set pumheight=10
+set termguicolors
 
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

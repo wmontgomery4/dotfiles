@@ -34,3 +34,6 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 export PATH=$PATH:$DIR/scripts
+
+# Status bar
+PS1="\[\033[32m\]\u\[\033[0m\]@\[\033[33m\]\h\[\033[0m\]:\[\033[1;32m\]\w\[\033[1;37m\]>\[\033[0m\]"

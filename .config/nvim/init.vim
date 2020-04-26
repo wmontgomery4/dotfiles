@@ -40,7 +40,7 @@ let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_c_parse_compile_commands = 1
 let g:ale_completion_tsserver_autoimport = 1
 let g:ale_completion_enabled = 1
-let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
 nmap <silent> <leader>ad :ALEGoToDefinitionInSplit<cr>
 nmap <silent> <leader>afr :ALEFindReferences<cr>
 nmap <silent> <leader>aff :ALEFix<cr>

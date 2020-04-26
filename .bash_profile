@@ -10,7 +10,6 @@ fi
 # Git credential helper
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
-export TERM=xterm-256color
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin

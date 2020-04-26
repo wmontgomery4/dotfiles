@@ -5,7 +5,6 @@ Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-jsonnet'
 Plug 'tpope/vim-unimpaired'
 Plug 'ervandew/supertab'
@@ -32,6 +31,8 @@ let g:ale_linters.python = ['pyls']
 let g:ale_fixers.python = ['autopep8']
 let g:ale_linters.swift = ['sourcekitlsp']
 let g:ale_fixers.swift = ['swiftformat']
+let g:ale_linters.go = ['gopls']
+let g:ale_fixers.go = ['gofmt']
 
 " Configuration for completion engines.
 let g:javascript_plugin_flow = 1

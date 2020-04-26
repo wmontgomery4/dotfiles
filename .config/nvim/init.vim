@@ -49,8 +49,6 @@ nmap <silent> <leader>ap :ALEPrevious<cr>
 nmap <silent> <leader>ar :ALERename<cr>
 let g:go_def_mode='gopls'
 let g:airline#extensions#ale#enabled = 1
-highlight ALEWarning ctermbg=none ctermfg=DarkMagenta
-highlight ALEError ctermbg=none ctermfg=DarkMagenta
 let g:SuperTabDefaultCompletionType = "<c-n>"
 set completeopt=longest,menuone
 set pumheight=10

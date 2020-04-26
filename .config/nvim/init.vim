@@ -10,6 +10,7 @@ Plug 'google/vim-jsonnet'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-unimpaired'
 Plug 'ervandew/supertab'
+Plug 'keith/swift.vim'
 call plug#end()
 
 " Linters, fixers, and language servers.
@@ -30,6 +31,8 @@ let g:ale_fixers.typescript = ['prettier']
 let g:ale_linters_ignore = {'typescript': ['tslint']}
 let g:ale_linters.python = ['pyls']
 let g:ale_fixers.python = ['autopep8']
+let g:ale_linters.swift = ['sourcekitlsp']
+let g:ale_fixers.swift = ['swiftformat']
 
 " Configuration for completion engines.
 let g:javascript_plugin_flow = 1

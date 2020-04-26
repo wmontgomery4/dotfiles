@@ -53,6 +53,7 @@ highlight ALEWarning ctermbg=none ctermfg=DarkMagenta
 highlight ALEError ctermbg=none ctermfg=DarkMagenta
 let g:SuperTabDefaultCompletionType = "<c-n>"
 set completeopt=longest,menuone
+set pumheight=10
 
 " ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

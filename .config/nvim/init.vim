@@ -72,4 +72,4 @@ set expandtab
 set clipboard=unnamed
 set hidden
 colorscheme elflord
-:highlight Pmenu ctermbg=gray guibg=gray
+:highlight Pmenu ctermbg=black guibg=black

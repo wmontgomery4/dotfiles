@@ -76,5 +76,7 @@ set shiftwidth=2
 set expandtab
 set clipboard=unnamed
 set hidden
+set splitright
+set splitbelow
 :highlight Pmenu ctermbg=black guibg=black ctermfg=white guifg=white
 :highlight PmenuSel ctermbg=DarkBlue guibg=DarkBlue ctermfg=white guifg=white

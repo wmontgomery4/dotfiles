@@ -40,7 +40,6 @@ let g:ale_rust_rls_toolchain = 'nightly'
 let g:ale_c_parse_compile_commands = 1
 let g:ale_completion_tsserver_autoimport = 1
 let g:ale_completion_enabled = 1
-let g:ale_hover_to_preview = 1
 nmap <silent> <leader>ad :ALEGoToDefinitionInSplit<cr>
 nmap <silent> <leader>afr :ALEFindReferences<cr>
 nmap <silent> <leader>aff :ALEFix<cr>
@@ -48,8 +47,6 @@ nmap <silent> <leader>ah :ALEHover<cr>
 nmap <silent> <leader>an :ALENext<cr>
 nmap <silent> <leader>ap :ALEPrevious<cr>
 nmap <silent> <leader>ar :ALERename<cr>
-" let g:ale_cursor_detail = 1
-" let g:ale_list_vertical = 1
 let g:go_def_mode='gopls'
 let g:airline#extensions#ale#enabled = 1
 highlight ALEWarning ctermbg=none ctermfg=DarkMagenta

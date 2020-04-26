@@ -72,5 +72,5 @@ set shiftwidth=2
 set expandtab
 set clipboard=unnamed
 set hidden
-colorscheme elflord
 :highlight Pmenu ctermbg=black guibg=black
+:highlight PmenuSel ctermbg=DarkBlue guibg=DarkBlue

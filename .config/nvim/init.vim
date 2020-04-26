@@ -33,6 +33,9 @@ let g:ale_linters.swift = ['sourcekitlsp']
 let g:ale_fixers.swift = ['swiftformat']
 let g:ale_linters.go = ['gopls']
 let g:ale_fixers.go = ['gofmt']
+let g:ale_set_signs = 1
+let g:ale_sign_column_always = 1
+:highlight SignColumn guibg=none
 
 " Configuration for completion engines.
 let g:javascript_plugin_flow = 1

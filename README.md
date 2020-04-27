@@ -1,20 +1,26 @@
 ## My dotfiles
+
 This repository is to track my dotfiles.
 
 # General Instructions
+
 Link what you want. Everything is off by default. Some examples are below.
 
-* `ln -s /path/to/repo/.vimrc ~/.vimrc`
+* `ln -s /path/to/repo/.bash_profile ~/.bash_profile`
 
-* `ln -s /path/to/repo/.config ~/.config/
+* `ln -s /path/to/repo/.tmux.conf ~/.tmux.conf`
+
+* `ln -s /path/to/repo/.config ~/.config/`
 
 * Or individually to an existing dir: `ln -s /path/to/repo/.config/nvim ~/.config/nvim`
 
 See below for individual packages' instructions.
 
 # Vim/Neovim
-Completion and linting are supported for Rust, Swift, C++, Go, Python, Javascript, Flow, and Typescript.
-Other languages can easily be added.
+
+The Vim/Neovim setup here has no natural dependencies, it's all Vimscript. However, support for completion
+and linting can be added by installing the relevant system packages, as descripted below. Steps for installing
+the configuration:
 
 * This repository requires a fairly new version of Vim or Neovim. Package managers tend to have a
   version that is too old. These days I install Homebrew on Linux to get around this. Then you can
@@ -23,6 +29,11 @@ Other languages can easily be added.
 * Install vim-plug according to https://github.com/junegunn/vim-plug.
 
 * Launch Vim or Neovim. run `:PlugInstall`.
+
+# Activating Langage Support
+
+Completion and linting are supported for Rust, Swift, C++, Go, Python, Javascript, Flow, and Typescript.
+Other languages can easily be added.
 
 * To activate C++ completion, clangd must be installed. Use your OS's package manager for easy
   and good results. Link to `clangd` on your `$PATH` if the binary's name is different. Homebrew

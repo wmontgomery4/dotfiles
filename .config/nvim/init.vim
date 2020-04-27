@@ -51,7 +51,7 @@ nmap <silent> <leader>aff :ALEFix<cr>
 nmap <silent> <leader>ah :ALEHover<cr>
 nmap <silent> <leader>an :ALENext<cr>
 nmap <silent> <leader>ap :ALEPrevious<cr>
-nmap <silent> <leader>ar :ALERename<cr>
+nmap <silent> <leader>ar :ALEStopAllLSPs<cr>
 let g:go_def_mode='gopls'
 let g:airline#extensions#ale#enabled = 1
 let g:SuperTabDefaultCompletionType = "<c-n>"

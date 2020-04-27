@@ -30,6 +30,22 @@ the configuration:
 
 * Launch Vim or Neovim. run `:PlugInstall`.
 
+# Special Keys for Language Servers
+
+* "\ad" goes to definition.
+
+* "\afr" finds references.
+
+* "\afr" finds references.
+
+* "\ah" displays hover text.
+
+* "\ap" goes to the previous issue.
+
+* "\an" goes to the next issue.
+
+* "\ar" resets language servers (pick up project changes, flags, etc.
+
 # Activating Langage Support
 
 Completion and linting are supported for Rust, Swift, C++, Go, Python, Javascript, Flow, and Typescript.

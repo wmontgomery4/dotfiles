@@ -44,7 +44,7 @@ the configuration:
 
 * "\an" goes to the next issue.
 
-* "\ar" resets language servers (pick up project changes, flags, etc.
+* "\ar" resets language servers (pick up project changes, flags, etc.)
 
 # Activating Langage Support
 

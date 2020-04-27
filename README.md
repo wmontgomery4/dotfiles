@@ -13,6 +13,8 @@ Link what you want. Everything is off by default. Some examples are below.
 See below for individual packages' instructions.
 
 # Vim/Neovim
+Completion and linting are supported for Rust, Swift, C++, Go, Python, Javascript, Flow, and Typescript.
+Other languages can easily be added.
 
 * This repository requires a fairly new version of Vim or Neovim. Package managers tend to have a
   version that is too old. These days I install Homebrew on Linux to get around this. Then you can
@@ -26,7 +28,9 @@ See below for individual packages' instructions.
   and good results. Link to `clangd` on your `$PATH` if the binary's name is different. Homebrew
   also has a version that works (and these days Homebrew works well on Linux).
 
-* My Vim config is setup to use `flow` for Javascript editing. Typescript won't work for now.
+* Javascript files should be parsed by Flow is available. The typescript-language-server will be
+  used if it's available. See ALE documentation for more information on how these binaries are
+  found.
 
 * Go support can be installing Go (`brew install go` and activated by typing 
   `:GoInstallBinaries` in the editor.
@@ -41,6 +45,12 @@ See below for individual packages' instructions.
   rustup update
   rustup component add rls rust-analysis rust-src rustfmt clippy
   ```
+
+* Swift support will be enabled if `sourcekit-lsp` is in `$PATH`. this is distributed with
+  most toolchains. On MacOSX this strangely enough requires you to `brew install swift` and
+  symbolically link it. Note that Swift toolchains are only available for new versions of
+  Fedora through dnf (`dnf install swift-lang`) and on some versions of Ubuntu from the
+  official binary distributions (not to mention MacOSX) at the time of this writing.
 
 * Activating Python support by installing all dependencies in a virtualenv before starting
   your editor. Make sure the Python version matches, and check project documentation for all

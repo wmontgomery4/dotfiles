@@ -1,4 +1,7 @@
+# Change escape to j
 escape ^Jj
+
+# Appearance
 autodetach on
 startup_message off
 defscrollback 30000
@@ -6,4 +9,6 @@ caption always "%{= bb}%{+b w}%h %=%{=b rw} %l %{= db} ${USER}@%H %{= dg}%c"
 hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 defshell -bash
 term screen-256color
+
+# Fixes delay problem with escape key in Neovim
 maptimeout 5

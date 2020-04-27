@@ -43,8 +43,8 @@ Other languages can easily be added.
   used if it's available. See ALE documentation for more information on how these binaries are
   found.
 
-* Go support can be installing Go (`brew install go` and activated by typing 
-  `:GoInstallBinaries` in the editor.
+* Go support can be installing Go (`brew install go`) and adding `~/go/bin` to `$PATH` (which is
+  already done in `.bash_profile`).
 
 * Activating Rust support is achieved by installing rustup (https://rustup.rs/) and installing 
   the right components:

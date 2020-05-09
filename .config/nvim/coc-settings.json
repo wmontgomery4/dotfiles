@@ -1,4 +1,4 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "c++", "c", "python"],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "cpp", "c", "python", "rust", "swift", "go"],
   "python.jediEnabled": false
 }

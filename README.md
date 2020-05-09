@@ -50,7 +50,7 @@ Following this, you should install some plugins for the language servers you use
 I use.
 
 ```
-:CocInstall coc-tsserver coc-python coc-clangd coc-json coc-sourcekit coc-rls coc-prettier
+:CocInstall coc-tsserver coc-python coc-clangd coc-json coc-sourcekit coc-rls coc-prettier coc-go
 ```
 
 See the CoC documentation for keybindings.

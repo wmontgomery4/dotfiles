@@ -6,17 +6,8 @@ Plug 'google/vim-jsonnet'
 Plug 'tpope/vim-unimpaired'
 Plug 'keith/swift.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sbdchd/neoformat'
 call plug#end()
-
-" ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_max_files=0
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files'],
-    \ },
-  \ 'fallback': 'find %s -type f'
-  \ }
 
 
 " General vim options
@@ -32,6 +23,28 @@ set splitbelow
 :highlight Pmenu ctermbg=black guibg=black ctermfg=white guifg=white
 :highlight PmenuSel ctermbg=DarkBlue guibg=DarkBlue ctermfg=white guifg=white
 :highlight SignColumn guibg=none
+
+" ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_max_files=0
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files'],
+    \ },
+  \ 'fallback': 'find %s -type f'
+  \ }
+
+" Autoforamt
+" on save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+" bind to leader f
+nmap <leader>f :Neoformat
+" An example in case we need to disable something
+" let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter']
+
 
 " CoC settings, source https://github.com/neoclide/coc.nvim
 " ---------------------------------------------------------

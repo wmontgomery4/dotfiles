@@ -6,7 +6,6 @@ Plug 'google/vim-jsonnet'
 Plug 'tpope/vim-unimpaired'
 Plug 'keith/swift.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sbdchd/neoformat'
 call plug#end()
 
 
@@ -33,17 +32,6 @@ let g:ctrlp_user_command = {
     \ },
   \ 'fallback': 'find %s -type f'
   \ }
-
-" Autoforamt
-" on save
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-" bind to leader f
-nmap <leader>f :Neoformat
-" An example in case we need to disable something
-" let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter']
 
 
 " CoC settings, source https://github.com/neoclide/coc.nvim

@@ -16,9 +16,13 @@ Link what you want. Everything is off by default. Some examples are below.
 
 See below for individual packages' instructions.
 
-# Vim/Neovim
+# Vim
+These dotfiles leave Vim and Vi unmolested so that they can be used for quick test editing.
 
-The Vim/Neovim setup here has no natural dependencies, it's all Vimscript. However, support for completion
+# Neovim
+Neovim is turned into an IDE with this setup.
+
+The Neovim setup here has no natural dependencies, it's all Vimscript. However, support for completion
 and linting can be added by installing the relevant system packages, as descripted below. Steps for installing
 the configuration:
 
@@ -30,23 +34,25 @@ the configuration:
 
 * Launch Vim or Neovim. run `:PlugInstall`.
 
-# Special Keys for Language Servers
+# CoC
+CoC (https://github.com/neoclide/coc.nvim) is a very comprehensive language server plugin used in this
+config. It basically turns your neovim into VSCode. Generally, you'll just need to install nodejs. 
+You might have your own preferred way of doing this, or you may use this method:
 
-* "\ad" goes to definition.
+```
+curl -sL install-node.now.sh/lts | bash
+```
 
-* "\afr" finds references.
+Following this, you should install some plugins for the language servers you use. Here are the ones
+I use.
 
-* "\afr" finds references.
+```
+:CocInstall coc-tsserver coc-python coc-clangd coc-json coc-sourcekit coc-rls
+```
 
-* "\ah" displays hover text.
+See the CoC documentation for keybindings.
 
-* "\ap" goes to the previous issue.
-
-* "\an" goes to the next issue.
-
-* "\ar" resets language servers (pick up project changes, flags, etc.)
-
-# Activating Langage Support
+# Installing Language Servers
 
 Completion and linting are supported for Rust, Swift, C++, Go, Python, Javascript, Flow, and Typescript.
 Other languages can easily be added.

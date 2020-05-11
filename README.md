@@ -63,13 +63,13 @@ A summary of things you might want to do while editing:
 | \qf        | Quick fix                                          |
 | \if \af    | Introduce function                                 |
 | \ic \ac    | Introduce class                                    |
-| <space>a   | Show all diagnostics                               |
-| <space>e   | Manage extensions                                  |
-| <space>c   | Show commands                                      |
-| <space>o   | Find symbol of current document                    |
-| <space>s   | Search workspace symbols                           |
-| <space>jk  | Default action next, previous                      |
-| <space>p   | Resume latest list                                 |
+| space a    | Show all diagnostics                               |
+| space e    | Manage extensions                                  |
+| space c    | Show commands                                      |
+| space o    | Find symbol of current document                    |
+| space s    | Search workspace symbols                           |
+| space jk   | Default action next, previous                      |
+| space p    | Resume latest list                                 |
 
 # CoC
 

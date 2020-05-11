@@ -101,7 +101,7 @@ to install them yourself. If you do, it can generally find them on the path.
 Learning to feed and water your language server can take a little bit of ramping up. They often require that
 certain project files be in certain places. It's usually worth it in the end.
 
-* `clangd`, the language server for c++, will look at `compile_commands.json in the directories and parent
+* `clangd`, the language server for c++, will look at `compile_commands.json` in the directories and parent
   directories of a file. This file contains what it needs to provide completions. Build systems (such as
   CMake and Bazel) typically provide some means of producing these files.
 

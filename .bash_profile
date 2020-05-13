@@ -1,6 +1,3 @@
-alias bzr='bazel run -c opt --config remotecache --config build'
-alias bzt='bazel test -c opt --config remotecache --config build'
-alias bzb='bazel build -c opt --config remotecache --config build'
 alias gcna='git commit --no-verify -am'
 alias gpoc='git push origin `git rev-parse --abbrev-ref HEAD`'
 if [ -e ~/.bashrc ]; then

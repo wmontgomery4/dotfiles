@@ -1,5 +1,6 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "cpp", "c", "python", "rust", "swift", "go"],
   "python.jediEnabled": false,
-  "sourcekit.commandPath": "sourcekit-lsp"
+  "sourcekit.commandPath": "sourcekit-lsp",
+  "clangd.fallbackFlags": ["-std=c++17"]
 }

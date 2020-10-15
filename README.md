@@ -82,6 +82,8 @@ You might have your own preferred way of doing this, or you may use this method:
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+source ~/.bashrc
+nvim install 12.19
 ```
 
 Following this, you should install some plugins for the language servers you use. Here are the ones

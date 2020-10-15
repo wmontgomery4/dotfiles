@@ -81,7 +81,7 @@ config. It basically turns your neovim into VSCode. Generally, you'll just need 
 You might have your own preferred way of doing this, or you may use this method:
 
 ```
-curl -sL install-node.now.sh/lts | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 ```
 
 Following this, you should install some plugins for the language servers you use. Here are the ones

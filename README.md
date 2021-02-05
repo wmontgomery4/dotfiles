@@ -91,6 +91,7 @@ I use.
 
 ```
 :CocInstall coc-tsserver coc-python coc-clangd coc-json coc-sourcekit coc-rls coc-prettier coc-go
+:CocCommand clangd.install
 ```
 
 See the CoC documentation for keybindings.
